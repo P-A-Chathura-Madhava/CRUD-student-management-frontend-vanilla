@@ -26,6 +26,33 @@ function saveStudent(){
     })
 }
 
+function updateStudent(){
+    let id=$('#exampleFormControlInput1').val();
+    let name=$('#exampleFormControlInput2').val();
+    let address=$('#exampleFormControlInput3').val();
+    let number=$('#exampleFormControlInput4').val();
+
+    $.ajax({
+        method:"PUT",
+        contentType:"application/json",
+        url:"http://localhost:8080/api/v1/student/updateStudent",
+        async:true,
+        data:JSON.stringify({
+            "id":id,
+            "name":name,
+            "address":address,
+            "contact":number
+        }),
+        success: function (data) {
+            alert("Updated")
+            getAllStudents()
+        },
+        error: function (xhr, exception) {
+            alert("Error")
+        }
+    })
+}
+
 function getAllStudents(){
 
     $.ajax({
