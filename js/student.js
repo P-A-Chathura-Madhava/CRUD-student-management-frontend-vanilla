@@ -51,3 +51,18 @@ function getAllStudents(){
         }
     })
 }
+
+$(document).ready(function () {
+    $(document).on('click', '#studentTable tr', function () {
+        var col0 = $(this).find('td:eq(0)').text();
+        var col1 = $(this).find('td:eq(1)').text();
+        var col2 = $(this).find('td:eq(2)').text();
+        var col3 = $(this).find('td:eq(3)').text();
+
+        $('#exampleFormControlInput1').val(col0);
+        $('#exampleFormControlInput2').val(col1);
+        $('#exampleFormControlInput3').val(col2);
+        $('#exampleFormControlInput4').val(col3);
+
+    })
+})
