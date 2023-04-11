@@ -7,6 +7,48 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container mt-5 col-6">
+        <h1>Student Management System</h1>
+        <div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Student ID</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="4">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput2" class="form-label">Student Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Kasun">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput3" class="form-label">Student Address</label>
+                <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Panadura">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput4" class="form-label">Student Contact</label>
+                <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="076-1234562">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-success" onclick="saveStudent()">Save</button>
+            <button type="button" class="btn btn-primary" onclick="updateStudent()">Update</button>
+            <button type="button" class="btn btn-danger" onclick="deleteStudent()">Delete</button>
+        </div>
+        <div class="mt-3">
+            <div class="table-section" >
+                <table class="table table-bordered border-primary table-hover">
+                    <thead class="table-dark">
+                    <tr>
+                        <th scope="col">EmpID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">M.Number</th>
+                    </tr>
+                    </thead>
+                    <tbody id="empTable">
 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
