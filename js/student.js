@@ -53,6 +53,23 @@ function updateStudent(){
     })
 }
 
+function deleteStudent(){
+    let id=$('#exampleFormControlInput1').val();
+
+    $.ajax({
+        method:"DELETE",
+        url:"http://localhost:8080/api/v1/student/deleteStudent/"+id,
+        async:true,
+        success: function (data) {
+            alert("Deleted")
+            getAllStudents()
+        },
+        error: function (xhr, exception) {
+            alert("Error")
+        }
+    })
+}
+
 function getAllStudents(){
 
     $.ajax({
