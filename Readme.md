@@ -15,7 +15,7 @@ of HTML and JavaScript. AJAX is used in here to connect the Frontend with the AP
 - Install MYSQL
 - Run Backend API
 - Run the application
-- Start live server or use Go Live in vs code to aun the application
+- Start live server or use Go Live in vs code to run the application
 
 ## UI of the Application
 ![ui-image](image/image-ui.png)
